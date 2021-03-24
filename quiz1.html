@@ -1,7 +1,14 @@
 <html> 
 <head> 
  <title>My Document</title> 
- <script type="text/javascript"> 
+ <script type="text/javascript">
+ function Try(){
+ var button =document.createElement("BUTTON");
+ button.innerHTML="change this document";
+ document.body.appendChild(button);
+ button.addEventListener("click",change);
+ } 
+ 
  function change() { 
  var header = document.getElementById("cgu"); 
  header.innerHTML = "CSIE@CGU"; 
@@ -12,7 +19,7 @@
  </script> 
 </head> 
 <body> 
- <input type="button" value="Change this document." onclick="change()"> 
+ <input type="button" value="Try it" onclick="Try()"> 
  <h1 id="cgu">CGU</h1> 
  <p id="good">好棒棒</p> 
 </body> 
